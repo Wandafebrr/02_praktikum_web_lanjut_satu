@@ -26,17 +26,10 @@ use Illuminate\Support\Facades\Route;
 
 
 //Jobsheet 2 Praktikum 1
-Route::get('/',function(){
-        echo"Selamat Datang";
-    });
+Route::get('/',[PageController::class,'index']);
 
-Route::get('/about',function(){
-    echo"NIM  : 2141720001 <br>";
-    echo"Nama : Wanda Febrina Cahya";
-});
+Route::get('/about',[PageController::class,'about']);
 
-Route::get('/articles/{id}',function($id){
-    echo"Halaman Artikel dengan ID : $id";
-});
+Route::get('/articles/{id}',[PageController::class,'articles']);
 
 
